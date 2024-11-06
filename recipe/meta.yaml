@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python >=3.11
+    - python =3.11.*
     - setuptools >=61.0
     - setuptools-scm
     - pip
@@ -44,6 +44,7 @@ test:
     - meteor.phaseboost --help
     - pytest ./test
   requires:
+    - python = 3.11
     - pip
     - pytest
 
