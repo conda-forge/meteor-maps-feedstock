@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "meteor-maps" %}
 {% set version = "0.3.2" %}
 
@@ -15,16 +16,16 @@ build:
     - meteor.phaseboost = meteor.scripts.compute_iterative_tv_map:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python =3.11.*
+    - python {{ python_min }}
     - setuptools >=61.0
     - setuptools-scm
     - pip
   run:
-    - python >=3.11
+    - python >={{ python_min }}
     - numpy >=1.26
     - scipy >=1.14.0
     - gemmi >=0.6.6
@@ -44,7 +45,7 @@ test:
     - meteor.phaseboost --help
     - pytest ./test
   requires:
-    - python = 3.11
+    - python {{ python_min }}
     - pip
     - pytest
 
