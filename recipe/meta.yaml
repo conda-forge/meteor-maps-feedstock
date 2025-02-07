@@ -1,6 +1,6 @@
-{% set python_min = '3.11' %}
+{% set python_min = "3.11" %}
 {% set name = "meteor-maps" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/meteor_maps-{{ version }}.tar.gz
-  sha256: e23f0a7f4eae7eca416fd118bcd4ea0f424c0d8de0e4db228c163df827e3c776
+  sha256: c66ea2ab4c265a29ab0fc5e2f20025137905e0f5119a4f5a94294c1d3c454fbe
 
 build:
   entry_points:
@@ -16,7 +16,7 @@ build:
     - meteor.phaseboost = meteor.scripts.compute_iterative_tv_map:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
