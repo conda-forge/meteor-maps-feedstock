@@ -12,8 +12,8 @@ source:
 
 build:
   entry_points:
-    - meteor.diffmap = meteor.scripts.compute_difference_map:main
-    - meteor.phaseboost = meteor.scripts.compute_iterative_tv_map:main
+    - meteor.diffmap = meteor.scripts.diffmap:main
+    - meteor.phaseboost = meteor.scripts.phaseboost:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
