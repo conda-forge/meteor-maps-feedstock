@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "meteor-maps" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/meteor_maps-{{ version }}.tar.gz
-  sha256: 2110a5e1f0f41928bd7677180ba9aa7ce35f086d7614deaa5aa3c0789bca6e9b
+  sha256: 6376749a2d33ca1876a263106b14b38fbf983efc6757a7461362ae388dee2472
 
 build:
   entry_points:
@@ -28,7 +28,7 @@ requirements:
     - python >={{ python_min }}
     - numpy >=1.26
     - scipy >=1.14.0
-    - gemmi ==0.6.6
+    - gemmi >=0.7.0
     - scikit-image >=0.24.0
     - reciprocalspaceship >=1.0.2
     - structlog >=24.4.0
