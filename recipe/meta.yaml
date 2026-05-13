@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "meteor-maps" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/meteor_maps-{{ version }}.tar.gz
-  sha256: 0102904e426d9ba07e537e248cbb5eff94275628e4f1fce56ad84d877920c607
+  sha256: 634db068b6c8789fdea9514cfabb2ad20b00dc500db1f0d069c9be7cd47f71a6
 
 build:
   entry_points:
